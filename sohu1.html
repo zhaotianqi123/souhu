@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+	*{margin: 0;padding: 0;}
+	#h1{
+	min-width: 1200px;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: fzlantingkanhei-r-gbkregular,PingFangSC-Regular,Microsoft YaHei,å¾®è½¯é›…é»‘,verdana,sans-serif;
+    cursor: default;
+    font-size: 14px;
+    letter-spacing: .28px;
+    color: rgba(0,0,0,.7);
+	}
+	#h1_1{
+	display: flex;
+	flex-direction: column;
+	min-width: 1200px;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	}
+	#h2{
+	flex: none;
+    background: #fff;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+	}
+	.span{
+	background: url(//passport-fe.cdn.sohusce.com/passport-pc/img/img-logo.4359cddd.png) no-repeat;
+    background-size: contain;
+    float: left;
+    display: inline-block;
+    width: 160px;
+    height: 38px;
+    margin: 8px 0 0 47px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 50px;
+	}
+	.span1{
+	display: inline-block;
+	height: 50px;
+    width: 1200px!important;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    text-align: right;
+    line-height: 50px;
+    font-size: 13px;
+    color: rgba(0,0,0,.7);
+    padding: 0;
+	}
+	.span2{
+	cursor: pointer;
+	margin-right: 40px;
+	padding: 0;
+	text-align: right;
+    line-height: 50px;
+    font-size: 13px;
+    color: rgba(0,0,0,.7);
+	}
+	.span3{
+	cursor: pointer;
+	padding-right: 160px;
+	margin: 0;
+	text-align: right;
+    line-height: 50px;
+    font-size: 13px;
+    color: rgba(0,0,0,.7);
+	}
+	#b{
+	flex: 1 0 auto;
+	margin: 0;
+    padding: 0;
+    display: block;
+	}
+	#b1{
+	height: 100%;
+	margin: 0;
+    padding: 0;
+    display: block;
+	}
+	#b2{
+	background: rgb(229, 221, 208);
+	transition: background 1s;
+    overflow: hidden;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    display: block;
+	}
+	.b3{
+	background-repeat: no-repeat;
+    background-position: left top;
+    position: relative;
+    clear: both;
+    transition: background 1s;
+    width: 1280px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+	}
+	.a{
+	display: block;
+    width: 654px;
+    height: 546px;
+    z-index: 1;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+	}
+	#b4{
+	position: absolute;
+    top: 65px;
+    left: 754px;
+    width: 343px;
+    height: 431px;
+    margin: 0;
+    padding: 0;
+    display: block;
+	}
+	.b5{
+	height: 242px;
+	transition: height .5s;
+    position: relative;
+    background: #fff;
+    width: 271px;
+    padding: 42px 31px 37px 37px;
+    box-shadow: 0 0 13px rgba(0,0,0,.06);
+    margin: 0;
+    font-family: fzlantingkanhei-r-gbkregular, PingFangSC-Regular, "Microsoft YaHei", 微软雅黑, verdana, sans-serif;
+    cursor: default;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+	}
+	#b6{
+	display: inline-block;
+	position: relative;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    height: 206px;
+    width: 270px;
+	}
+	#b7{
+	padding-top: 12px;
+	position: relative;
+	margin: 0;
+	display: block;
+	height: 55px;
+	width: 270px;
+	}
+	#b8{
+	height: 30px;
+	width: 270px;
+    display: flex;
+    position: relative;
+    font-size: 16px;
+    letter-spacing: .32px;
+    padding-top: 25px;
+    flex-direction: column;
+    margin: 0;
+	}
+	#b9{
+	display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+    height: 30px;
+    width: 270px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: .32px;
+	}
+	.input{
+	width: 270px;
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: transparent;
+    z-index: 0;
+    text-align: left;
+    height: 16px;
+    font-family: inherit;
+    font-size: 16px;
+    letter-spacing: .32px;
+    padding: 7px 0;
+    user-select: text;
+    margin: 0;
+    color: black;
+    outline: none;
+    border-style: solid;
+    border-width:0px 0px 1px 0px;
+    border-color: rgb(14, 142, 241) black #e5e5e5 black;
+	}
+	.input::-webkit-input-placeholder { 
+    color: rgba(0,0,0,.3);
+	}
+	.input1{
+	width: 243px;
+	display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: transparent;
+    z-index: 0;
+    text-align: left;
+    height: 16px;
+    font-family: inherit;
+    font-size: 16px;
+    letter-spacing: .32px;
+    padding: 7px 0;
+    user-select: text;
+    margin: 0;
+    outline: none;
+    border-style: solid;
+    border-width:0px 0px 1px 0px;
+    border-color: rgb(14, 142, 241) black #e5e5e5 black;
+	}
+	#input{
+	transform-origin: bottom left;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 243px;
+    height: 30px;
+    line-height: 30px;
+    cursor: text;
+    color: rgba(0,0,0,.2);
+	}
+	#input1{
+	transform-origin: bottom left;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 243px;
+    height: 30px;
+    line-height: 30px;
+    cursor: text;
+    color: rgba(0,0,0,.2);
+	}
+	#b10{
+	position: absolute;
+    bottom: 3px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+	}
+	#b10 {background: url(素材/35.svg)}
+	#b11{
+	padding-top: 24px;
+    width: 270px;
+    height: 48px;
+    margin: 0 auto;
+    display: block;
+	}
+	.span4{
+	height: 48px;
+    line-height: 48px;
+    border-radius: 24px;
+    display: inline-block;
+    background: #ffcb05;
+    text-align: center;
+    width: 270px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: .32px;
+    box-shadow: 0 2px 20px rgba(255,203,5,.6);
+    color: #cda304!important;
+	}
+	.span4:hover{
+	box-shadow:0 1px 30px rgba(255,203,5,.1);
+	}
+	.b12{
+	width: 270px;
+	height: 16px;
+    padding-top: 20px;
+    position: relative;
+    margin: 0;	
+	}
+	.span5{
+	color: rgba(0,0,0,.4);
+	display: inline-block;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: .31px;
+    height: 16px;
+    line-height: 16px;
+	}
+	.span6{
+	position: absolute;
+    right: 0;
+    color: #fdb115;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: .31px;
+    height: 16px;
+    line-height: 16px;
+	}
+	.span7{
+	display: none;
+	position: absolute;
+    right: 0;
+    color: #fdb115;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: .31px;
+    height: 16px;
+    line-height: 16px;
+	}
+	.a1{
+	display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: .32px;
+    height: 16px;
+    line-height: 16px;
+    margin: 12px 0 20px;
+    text-shadow: 0 0 4px rgba(0,0,0,.1);
+    width: 654px;
+    z-index: 1;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+	}
+	.span8{
+	display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    letter-spacing: .32px;
+    font-size: "16px";
+    line-height: 16px;
+    text-shadow: 0 0 4px rgba(0,0,0,.1);
+	}
+	.span9{
+	margin-left: -4px;
+    position: relative;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    display: inline-block;
+	}
+	.b13{
+	text-align: center;
+    width: 343px;
+    height: 62px;
+    margin: 0;
+    padding: 0;
+    display: block;
+	}
+	#b14{
+	color: rgba(0,0,0,.3);
+    font-size: 12px;
+    letter-spacing: .24px;
+    margin: 0;
+    width: 343px;
+    height: 16px;
+    padding: 0;
+    display: block;
+    text-align: center;
+	}
+	#b15{
+	height: 34px;
+	width: 343px;
+	padding-top: 12px;
+    margin: 0;
+    display: block;
+    text-align: center;
+	}
+	.span10{
+	background-size: contain;
+	display: inline-block;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 36px;
+    margin-right: 56px;
+    padding: 0;
+	}
+	.span10 {background: url(素材/29.svg)}
+	.span10:hover{background: url(素材/30.png)}
+	.span11{
+	background-size: contain;
+	display: inline-block;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 36px;
+    margin-right: 56px;
+    padding: 0;
+	}
+	.span11 {background: url(素材/31.svg)}
+	.span11:hover{background: url(素材/32.svg)}
+	.span12{
+	background-size: contain;
+    margin-right: 0;
+    display: inline-block;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 36px;
+	}
+	.span12 {background: url(素材/33.svg)}
+	.span12:hover{background: url(素材/34.svg)}
+	.b16{
+	max-width: 1100px;
+    width: 100%;
+    height: 70px;
+    padding: 74px 0 60px;
+    margin: 0 auto;
+    display: block;
+	}
+	.b17{
+	width: 33%;
+    box-sizing: border-box;
+    padding-left: 84px;
+    height: 70px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+	}
+	.span13{
+	background-size: contain;
+	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+	}
+	#b18{
+	font-size: 18px;
+    letter-spacing: -.43px;
+    color: #000;
+    padding: 5px 0;
+    height: 30px;
+    width: 279px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0;
+	}
+	#b19{
+	font-size: 12px;
+    letter-spacing: .24px;
+    color: rgba(0,0,0,.7);
+    height: 13px;
+    width: 279px;
+    line-height: 13px;
+    margin: 0;
+    padding: 0;
+	}
+	#f1{
+	flex: none;
+	height: 41px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: .24px;
+    padding-bottom: 12px;
+	}
+	.f2{
+	height: 17px;
+    line-height: 17px;
+    padding-bottom: 4px;
+    margin: 0;
+	}
+	.a2{
+	color: rgba(0,0,0,.7);
+	text-decoration: none;
+	cursor: pointer;
+	}
+	.aside{
+	display: inline-block;
+    padding: 0 5px;
+    margin: 0;
+	}
+	.p{
+	height: 20px;
+	width: 100%;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: .24px;
+    font-family: fzlantingkanhei-r-gbkregular, PingFangSC-Regular, "Microsoft YaHei", 微软雅黑, verdana, sans-serif;
+    cursor: default;
+	}
+</style>
+<head>
+	<meta charset="UTF-8">
+	<title>搜狐通行证</title>
+</head>
+<body>
+	<article id="h1">
+		<article id="h1_1">
+			<header id="h2">
+				<span class="span">
+					<img src="素材/27.png" style="width: 160px;height: 38px;">
+				</span>
+				<span class="span1">
+					<span class="span2">账号解冻</span>
+					<span class="span3">账号申诉</span>
+				</span>
+			</header>
+			<section id="b">
+				<article id="b1">
+					<section id="b2">
+						<aside class="b3">
+							<a href="#" class="a">
+								<img src="素材/28.png">
+							</a>
+							<div id="b4">
+								<section class="b5">
+									<div>
+										<section id="b6">
+											<div id="b7">
+												<div id="b8">
+													<div id="b9">
+														<input type="text" class="input" placeholder="请输入手机或邮箱账号">
+													</div>
+												</div>
+											</div>
+											<div id="b7">
+												<div id="b8">
+													<div id="b9">
+														<input type="password" class="input" placeholder="请输入密码">
+														<div id="b10">
+															
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="b11">
+												<span class="span4">登录</span>
+											</div>
+										</section>
+									</div>
+									<section class="b12">
+										<span class="span5">忘记密码</span>
+										<span class="span6">手机验证码登录</span>
+										<span class="span7">账号密码登录</span>
+									</section>
+								</section>
+								<a href="file:///F:/%E9%A1%B9%E7%9B%AE-%E8%B5%B5%E7%94%9C%E7%90%A6/%E6%90%9C%E7%8B%90%E6%B3%A8%E5%86%8C.html" class="a1">
+									<span class="span8"> 创建账号</span>
+									<span class="span9">
+										<img src="素材/36.svg"style="width: 16px;height: 16px;">
+									</span>
+								</a>
+								<section class="b13">
+									<div id="b14">使用三方登录搜狐帐号</div>
+									<div id="b15">
+										<span class="span10"></span>
+										<span class="span11"></span>
+										<span class="span12"></span>
+									</div>
+								</section>
+							</div>
+						</aside>
+					</section>
+					<section class="b16">
+						<section class="b17">
+							<span class="span13">
+								<img src="素材/37.png" style="width: 70px;height: 70px;">
+							</span>
+							<div id="b18">安全保障</div>
+							<div id="b19">充分尊重个人隐私</div>
+							<div id="b19">保障账户安全</div>
+						</section>
+						<section class="b17">
+							<span class="span13">
+								<img src="素材/39.png" style="width: 70px;height: 70px;">
+							</span>
+							<div id="b18">一键登录</div>
+							<div id="b19">多种登录方式便捷登录</div>
+						</section>
+						<section class="b17">
+							<span class="span13">
+								<img src="素材/38.png" style="width: 70px;height: 70px;">
+							</span>
+							<div id="b18">贴心客服</div>
+							<div id="b19">邮箱：webmaster@vip.sohu.com</div>
+							<div id="b19">电话：010-58103760</div>
+						</section>
+					</section>
+				</article>
+			</section>
+			<footer id="f1">
+				<nav class="f2">
+					<a href="#" class="a2">关于我们</a>
+					<aside class="aside">|</aside>
+					<a href="#" class="a2">搜狐首页</a>
+					<aside class="aside">|</aside>
+					<a href="#" class="a2">搜狐邮箱</a>
+				</nav>
+				<p class="p">Copyright ©️ 2019 Sohu All Rights Reserved. 搜狐公司 版权所有</p>
+			</footer>
+		</article>
+	</article>
+</body>
+</html>
